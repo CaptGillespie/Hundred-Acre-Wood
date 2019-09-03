@@ -1,0 +1,20 @@
+var tigger = { character: "Tigger" };
+var pooh = { character: "Winnie the Pooh" };
+tigger.north = pooh;
+pooh.south = tigger;
+
+var piglet = { character: "Piglet"}; 
+piglet.east = tigger.north;         
+tigger.north.west = piglet;          
+                                  
+var bees = { character: "Bees"};
+bees.west = tigger.north;
+tigger.north.east = bees;
+
+var Christopher = { character: "Christopher Robin"};
+Christopher.south = tigger.north;
+tigger.north.north = Christopher;
+
+var Owl = { character: "Owl"};
+Owl.east = pooh.north;
+pooh.north.west = Owl;
